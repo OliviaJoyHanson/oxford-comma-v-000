@@ -4,6 +4,6 @@ def oxford_comma(array)
     with_and = "and " << last
     array.push(with_and).join(",")
   elsif array.size == 1
-    array
+    array.join
   end
 end
