@@ -8,7 +8,7 @@ def oxford_comma(array)
     last = array.pop
     with_and = " and " << last
     array << with_and
-    array.push(no_oxford).join(", ")
+    array.join(", ")
   elsif array.size == 1
     array.join
   end
