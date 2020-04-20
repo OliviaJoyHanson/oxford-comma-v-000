@@ -1,14 +1,12 @@
 def oxford_comma(array)
-  if array.size == 2
+  if array > 2
     last = array.pop
-    with_and = " and " << last
-    no_oxford = array.pop << with_and
-    array.push(no_oxford).join
-  elsif array.size > 2
-    last = array.pop
-    with_and = "and " << last
-    array.push(with_and).join(", ")
-  elsif array.size == 1
+    string = array.join(", ")
+    string << ", and"
+    string << last
+  elsif array == 2
+    array.join(" and ")
+  else
     array.join
   end
 end
